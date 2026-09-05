@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "project": {
+    "catalog": "prod",
+    "initializedAt": "2026-09-05T12:58:17.035Z",
+    "merchantDisplayName": "homely",
+    "merchantId": "acct_1UBdaeIa3JSxVyGX",
+    "projectId": "project_61VLh84QFtxagGkwg16VL1Y1QHSQJdazBTE5tpVtYNwu",
+    "projectName": "homely"
+  },
+  "providers": {
+    "clerk": {
+      "accountRequestId": "facctrq_61VLhAQKPwhw7XtxQ16VL1Y1QHSQJdazBTE5tpVtY9e4",
+      "configuration": {},
+      "linkedAt": "2026-09-05T13:00:45.015Z",
+      "providerId": "prvdr_61UGOeSW4e0T9Etwn537w",
+      "providerName": "Clerk",
+      "redirectUrl": null,
+      "requestedAt": "2026-09-05T13:00:45.015Z",
+      "status": "complete"
+    }
+  },
+  "resources": {
+    "clerk-auth": {
+      "configuration": {
+        "app_name": "homely"
+      },
+      "createdAt": "2026-09-05T13:03:52.938Z",
+      "lastRevealedAt": "2026-09-05T13:03:54.038Z",
+      "lastStatus": "complete",
+      "name": "clerk-auth",
+      "providerId": "prvdr_61UGOeSW4e0T9Etwn537w",
+      "providerName": "Clerk",
+      "resourceId": "fres_61VLhDS0jPpFo0DdZ16VL1Y1QHSQJdazBTE5tpVtYY5o",
+      "serviceId": "auth"
+    },
+    "clerk-plan": {
+      "configuration": {},
+      "createdAt": "2026-09-05T13:00:47.957Z",
+      "lastRevealedAt": "2026-09-05T13:00:48.629Z",
+      "lastStatus": "complete",
+      "name": "clerk-plan",
+      "providerId": "prvdr_61UGOeSW4e0T9Etwn537w",
+      "providerName": "Clerk",
+      "resourceId": "fres_61VLhAUhJMMjzkdrV16VL1Y1QHSQJdazBTE5tpVtY5tA",
+      "serviceId": "hobby"
+    }
+  }
+}

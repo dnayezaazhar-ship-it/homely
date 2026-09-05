@@ -11,3 +11,7 @@ Convex agent skills for common tasks can be installed by running
 `npx convex ai-files install`.
 
 <!-- convex-ai-end -->
+
+<!-- stripe-projects-cli managed:claude-md:start -->
+look at AGENTS.md for your rules
+<!-- stripe-projects-cli managed:claude-md:end -->
