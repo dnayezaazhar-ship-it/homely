@@ -30,7 +30,7 @@ export const seed = internalMutation({
         .withIndex("by_clerk_id", (query) => query.eq("clerkId", user.clerkId))
         .unique();
       if (existing) {
-        await ctx.db.patch(existing._id, user);
+        await ctx.db.patch("users", existing._id, user);
       } else {
         await ctx.db.insert("users", user);
       }
@@ -48,7 +48,7 @@ export const seed = internalMutation({
 
     let listings = 0;
     for (const listing of demoListings) {
-      await ctx.db.insert("listings", { ...listing, hostId: demoUsers[0].clerkId, status: "published" });
+      await ctx.db.insert("listings", { ...listing, images: listing.images ?? [listing.imageUrl], hostId: demoUsers[0].clerkId, status: "published" });
       listings += 1;
     }
 

@@ -1,0 +1,38 @@
+export const authAppearance = {
+  variables: {
+    colorPrimary: "#d9674d",
+    colorBackground: "transparent",
+    colorText: "#202522",
+    colorTextSecondary: "#6e756f",
+    borderRadius: "4px",
+    fontFamily: "Georgia, Times New Roman, serif",
+    
+  },
+  layout: {
+    socialButtonsPlacement: "top" as const,
+    socialButtonsVariant: "blockButton" as const,
+  },
+  elements: {
+    rootBox: "auth-clerk-root",
+    card: "auth-clerk-card",
+    main: "auth-clerk-main",
+    header: "auth-clerk-header",
+    headerTitle: "auth-clerk-title",
+    headerSubtitle: "auth-clerk-subtitle",
+    socialButtons: "auth-clerk-social-buttons",
+    socialButtonsBlockButton: "auth-clerk-social-button",
+    dividerLine: "auth-clerk-divider-line",
+    dividerText: "auth-clerk-divider-text",
+    form: "auth-clerk-form",
+    formFieldLabel: "auth-clerk-label",
+    formFieldLabelRow: "auth-clerk-label-row",
+    formFieldInput: "auth-clerk-input",
+    formButtonPrimary: "auth-clerk-primary",
+    formFieldAction: "auth-clerk-action",
+    formFieldSuccessText: "auth-clerk-success",
+    formFieldErrorText: "auth-clerk-error",
+    footerActionText: "auth-clerk-footer-text",
+    footer: "auth-clerk-footer",
+    footerActionLink: "auth-clerk-link",
+  },
+};

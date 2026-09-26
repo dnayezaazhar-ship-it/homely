@@ -17,7 +17,16 @@ export default defineSchema({
     country: v.string(),
     description: v.string(),
     imageUrl: v.string(),
+    images: v.optional(v.array(v.string())),
+    photoStorageIds: v.optional(v.array(v.id("_storage"))),
+    propertyType: v.optional(v.string()),
+    address: v.optional(v.string()),
+    region: v.optional(v.string()),
+    latitude: v.optional(v.number()),
+    longitude: v.optional(v.number()),
     pricePerNight: v.number(),
+    cleaningFee: v.optional(v.number()),
+    serviceFeePercent: v.optional(v.number()),
     rating: v.number(),
     reviewCount: v.number(),
     guests: v.number(),
@@ -27,16 +36,25 @@ export default defineSchema({
     category: v.string(),
     status: v.union(v.literal("draft"), v.literal("published")),
     amenities: v.array(v.string()),
+    minNights: v.optional(v.number()),
+    maxNights: v.optional(v.number()),
+    checkInTime: v.optional(v.string()),
+    checkOutTime: v.optional(v.string()),
+    instantBook: v.optional(v.boolean()),
+    houseRules: v.optional(v.string()),
   }).index("by_status", ["status"]).index("by_host_id", ["hostId"]),
   bookings: defineTable({
     listingId: v.id("listings"),
     guestId: v.string(),
+    hostId: v.optional(v.string()),
     checkIn: v.string(),
     checkOut: v.string(),
     guests: v.number(),
     nights: v.number(),
     subtotal: v.number(),
     platformFee: v.number(),
+    serviceFee: v.optional(v.number()),
+    cleaningFee: v.optional(v.number()),
     total: v.number(),
     status: v.union(
       v.literal("pending"),
@@ -45,5 +63,9 @@ export default defineSchema({
       v.literal("completed"),
     ),
     stripePaymentIntentId: v.optional(v.string()),
-  }).index("by_guest_id", ["guestId"]).index("by_listing_id", ["listingId"]),
+  }).index("by_guest_id", ["guestId"])
+    .index("by_listing_id", ["listingId"])
+    .index("by_host_id", ["hostId"])
+    .index("by_status", ["status"])
+    .index("by_listing_id_and_check_in", ["listingId", "checkIn"]),
 });
