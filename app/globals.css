@@ -1,4 +1,3 @@
-@media (max-width: 620px) { .site-header .top-nav .host-dashboard-link { display: flex !important; } }
 @import "tailwindcss";
 
 @theme inline {
@@ -273,3 +272,186 @@ footer { display: flex; justify-content: space-between; align-items: center; pad
 @media (max-width: 620px) { .listing-form-shell { width: min(100% - 32px, 860px); padding-top: 24px; }.listing-form-heading h1 { font-size: 48px; letter-spacing: -2px; }.listing-form-section { padding: 20px 16px; }.form-grid, .form-grid-three, .form-grid-four { grid-template-columns: 1fr 1fr; }.form-span-two { grid-column: span 2; }.amenity-form-grid { grid-template-columns: 1fr 1fr; }.photo-grid { grid-template-columns: repeat(2, 1fr); }.form-section-heading { align-items: start; flex-direction: column; gap: 12px; } }
 @media (max-width: 950px) { .hero { flex-direction: column; align-items: start; justify-content: center; min-height: 610px; }.search-panel { align-self: stretch; }.listing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.map-open { display: block; }.map-panel { min-height: 390px; position: relative; margin-top: 40px; }.detail-gallery { height: 390px; }.detail-layout { gap: 30px; grid-template-columns: minmax(0, 1fr) 300px; } }
 @media (max-width: 620px) { .site-header { height: 65px; padding: 0 20px; }.top-nav { gap: 12px; }.top-nav .host-dashboard-link { display: none; }.top-nav a { font-size: 12px; }.hero { padding: 65px 20px 28px; min-height: 600px; }.hero h1 { letter-spacing: -3px; font-size: 62px; }.search-panel { flex-wrap: wrap; }.search-field { min-width: 45%; }.guests-field { min-width: 45%; }.search-button { margin-left: auto; }.explore-bar { padding: 18px 20px; overflow-x: auto; }.categories { min-width: max-content; }.bar-actions { display: none; }.content-grid { padding: 38px 20px 65px; }.section-heading h2 { font-size: 34px; }.listing-grid { grid-template-columns: 1fr 1fr; gap: 28px 12px; }.image-wrap { aspect-ratio: 1 / 1.1; }.listing-title h3 { font-size: 16px; }.listing-info p { font-size: 12px; }.listing-meta { display: none; }.price { font-size: 11px; }.host-banner { padding: 55px 20px; flex-direction: column; align-items: start; }.host-banner h2 { font-size: 38px; }footer { padding: 25px 20px; flex-wrap: wrap; gap: 15px; }footer span:nth-child(2) { display: none; }.trips-empty-state { min-height: 330px; padding: 48px 12px; }.detail-shell { width: min(100% - 32px, 1120px); padding-top: 24px; }.detail-heading { align-items: start; flex-direction: column; }.detail-heading h1 { font-size: 45px; }.detail-save { margin-top: -10px; }.detail-gallery { height: 290px; grid-template-columns: 1fr 1fr; }.detail-gallery-main { grid-column: span 2; grid-row: auto; }.detail-gallery-image:not(.detail-gallery-main) { display: none; }.detail-layout { display: block; padding-top: 24px; }.booking-card { position: static; margin-top: 28px; }.detail-host-row h2, .detail-section h2 { font-size: 19px; }.gallery-modal { padding: 70px 12px 18px; }.gallery-viewer { grid-template-columns: 36px minmax(0, 1fr) 36px; gap: 5px; height: min(57vh, 500px); }.gallery-arrow { width: 34px; height: 34px; }.gallery-close { top: 16px; right: 16px; }.booking-summary-shell { width: min(100% - 32px, 1040px); padding-top: 24px; }.booking-confirmation { margin-bottom: 28px; }.booking-confirmation h1 { font-size: 42px; }.booking-summary-grid { display: block; }.price-summary { position: static; margin-top: 16px; }.booking-summary-card { padding: 20px; }.summary-details { grid-template-columns: 1fr; gap: 14px; }.date-fields { gap: 6px; } }
+
+@media (max-width: 767px) {
+  html, body { max-width: 100%; }
+  body { overflow-x: clip; }
+  img { max-width: 100%; }
+  .site-header { min-width: 0; }
+  .top-nav, .nav-links, .nav-actions { min-width: 0; }
+  .top-nav a, .nav-links a { min-height: 40px; }
+  .hero { min-width: 0; }
+  .hero-copy { width: 100%; }
+  .hero-note { max-width: 34rem; }
+  .explore-bar { min-width: 0; }
+  .category, .filter-button, .map-button { min-height: 44px; }
+  .listing-card, .listing-info, .listing-title { min-width: 0; }
+  .listing-title h3, .listing-info p { overflow-wrap: anywhere; }
+  .listing-title span { flex: 0 0 auto; white-space: nowrap; }
+  .heart { width: 40px; height: 40px; }
+  .host-banner { min-width: 0; }
+  .host-banner h2 { font-size: clamp(32px, 6vw, 44px); }
+  footer { min-width: 0; }
+  .host-page { min-height: auto; padding: 12vh 8vw; }
+  .host-page h1 { font-size: clamp(42px, 9vw, 64px); letter-spacing: -3px; }
+  .host-dashboard-shell { min-width: 0; }
+  .host-dashboard-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .host-dashboard-option { min-width: 0; }
+  .host-listing-row { align-items: flex-start; }
+  .host-listing-row span { overflow-wrap: anywhere; }
+  .detail-layout { display: block; padding-top: 24px; }
+  .booking-card { position: static; margin-top: 28px; }
+  .detail-heading h1 { overflow-wrap: anywhere; }
+  .detail-host-row > div { min-width: 0; }
+  .detail-host-row h2 { overflow-wrap: anywhere; }
+  .booking-summary-grid { grid-template-columns: minmax(0, 1fr); }
+  .price-summary { position: static; }
+  .booking-summary-card { min-width: 0; }
+  .summary-property > div { min-width: 0; }
+  .summary-property h2 { overflow-wrap: anywhere; }
+  .summary-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .auth-layout { min-width: 0; }
+  .auth-story, .auth-shell, .auth-clerk-root, .auth-clerk-card { min-width: 0; }
+  .auth-story-panel { padding: 18px; }
+  .auth-clerk-card { padding-right: 20px; padding-left: 20px; }
+  .listing-form-shell, .storefront-shell, .booking-summary-shell, .detail-shell { min-width: 0; }
+  .stripe-onboarding-shell { min-width: 0; }
+  .stripe-status-pills { align-items: flex-start; }
+  .stripe-status-pill { min-height: 36px; }
+}
+
+@media (max-width: 620px) {
+  .hero h1 { font-size: clamp(38px, 11.7vw, 54px); letter-spacing: -2.5px; line-height: .98; }
+  .search-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .search-field, .guests-field { min-width: 0; padding: 8px 6px; border-right: 0; }
+  .search-field label { min-width: 0; }
+  .search-button { grid-column: 1 / -1; width: 100%; min-height: 46px; margin: 0; }
+  .explore-bar { gap: 12px; overflow: visible; flex-wrap: wrap; }
+  .categories { min-width: 0; flex-wrap: wrap; }
+  .content-grid { padding-right: 16px; padding-left: 16px; }
+  .section-heading { align-items: flex-start; gap: 12px; }
+  .section-heading h2 { font-size: clamp(28px, 7vw, 34px); }
+  .result-count { flex: 0 0 auto; padding-top: 4px; }
+  .listing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 12px; }
+  .listing-title { align-items: flex-start; }
+  .listing-title h3 { font-size: 15px; }
+  .listing-info p { font-size: 12px; }
+  .price { line-height: 1.5; }
+  .host-banner { padding-right: 20px; padding-left: 20px; }
+  .host-banner h2 { line-height: 1.08; }
+  .host-dashboard-shell { width: min(100% - 32px, 980px); padding-top: 32px; }
+  .host-dashboard-heading { display: block; }
+  .host-dashboard-actions { flex-wrap: wrap; margin-top: 20px; }
+  .stripe-onboarding-button, .new-listing-button { min-height: 44px; }
+  .host-dashboard-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .host-listing-row button { min-height: 40px; }
+  .listing-form-shell { width: min(100% - 32px, 860px); padding-top: 24px; }
+  .listing-form-heading h1 { font-size: clamp(38px, 9vw, 48px); letter-spacing: -2px; overflow-wrap: anywhere; }
+  .listing-form-section { min-width: 0; padding: 20px 16px; }
+  .listing-form-section input:not([type="checkbox"]), .listing-form-section select, .listing-form-section textarea { min-width: 0; min-height: 44px; }
+  .form-grid, .form-grid-three, .form-grid-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-span-two { grid-column: span 2; }
+  .amenity-form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .amenity-option { min-width: 0; min-height: 42px; overflow-wrap: anywhere; }
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .photo-picker { min-height: 44px; }
+  .photo-preview button { width: 36px; height: 36px; }
+  .form-section-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .listing-form-actions { align-items: stretch; flex-wrap: wrap; }
+  .listing-form-submit-group { width: 100%; }
+  .listing-form-submit-group > button { min-height: 46px; flex: 1 1 0; justify-content: center; }
+  .form-submit { min-height: 46px; }
+  .storefront-shell { width: min(100% - 32px, 1080px); padding-top: 36px; }
+  .storefront-heading h1 { font-size: clamp(38px, 9vw, 56px); letter-spacing: -2.5px; overflow-wrap: anywhere; }
+  .storefront-product { grid-template-columns: minmax(76px, .36fr) minmax(0, 1fr); }
+  .storefront-product-copy { padding: 14px; }
+  .storefront-product-copy h2 { font-size: clamp(20px, 5.5vw, 25px); overflow-wrap: anywhere; }
+  .storefront-product-footer { flex-wrap: wrap; }
+  .storefront-product-footer button { min-height: 44px; }
+  .detail-heading h1 { font-size: clamp(34px, 9.5vw, 42px); letter-spacing: -2px; }
+  .detail-save { min-height: 44px; margin-top: 0; }
+  .detail-gallery { height: clamp(210px, 70vw, 290px); }
+  .detail-gallery-all { right: 10px; bottom: 10px; min-height: 44px; padding: 9px 11px; }
+  .booking-card { padding: 18px; }
+  .booking-card-toggle { min-height: 40px; }
+  .date-summary button { min-height: 56px; }
+  .calendar-grid button, .calendar-grid span { min-height: 36px; }
+  .calendar-heading button { width: 36px; height: 36px; }
+  .booking-card input { min-height: 44px; }
+  .reserve-button { min-height: 48px; }
+  .gallery-viewer { grid-template-columns: 36px minmax(0, 1fr) 36px; }
+  .gallery-arrow { min-width: 36px; min-height: 36px; }
+  .booking-summary-shell { width: min(100% - 32px, 1040px); padding-top: 24px; }
+  .booking-confirmation { gap: 12px; margin-bottom: 28px; }
+  .booking-confirmation h1 { font-size: clamp(34px, 9vw, 42px); letter-spacing: -2px; }
+  .booking-summary-grid { display: grid; }
+  .booking-summary-card { padding: 20px; }
+  .summary-details { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .price-summary { margin-top: 0; }
+  .summary-property img { width: 100px; height: 90px; flex: 0 0 auto; }
+  .payment-placeholder { align-items: flex-start; flex-wrap: wrap; }
+  .payment-placeholder > span { margin-left: 32px; }
+  .auth-page .site-header { margin-bottom: 28px; }
+  .auth-layout { padding-right: 20px; padding-left: 20px; }
+  .auth-story-image { height: 210px; }
+  .auth-brand { margin-bottom: 24px; }
+  .auth-clerk-card { padding: 22px 16px 0; }
+  .trips-tabs { gap: 22px; margin-top: 32px; }
+  .trips-tabs button { min-height: 44px; }
+  .trips-empty-state h2 { font-size: 28px; line-height: 1.1; }
+  .stripe-onboarding-shell { width: min(calc(100% - 32px), 700px); padding-top: 25px; }
+  .stripe-onboarding-actions { flex-wrap: wrap; }
+  .stripe-continue-button, .stripe-refresh-button { min-height: 44px; }
+}
+
+@media (max-width: 399px) {
+  .site-header { height: auto; min-height: 64px; flex-wrap: wrap; row-gap: 6px; padding: 10px 16px; }
+  .site-header > .brand { flex: 1 0 100%; }
+  .top-nav { width: 100%; flex-wrap: wrap; justify-content: space-between; gap: 4px 8px; }
+  .nav-links { gap: 12px; }
+  .nav-actions { margin-left: 0; }
+  .top-nav .sign-in { padding: 8px 11px; }
+  .top-nav .sign-up { padding: 9px 11px; }
+  .hero { padding-right: 16px; padding-left: 16px; }
+  .hero h1 { font-size: clamp(36px, 11.5vw, 44px); letter-spacing: -2px; }
+  .search-field { gap: 5px; }
+  .search-field svg { width: 15px; flex: 0 0 auto; }
+  .explore-bar { padding-right: 16px; padding-left: 16px; }
+  .section-heading { display: block; }
+  .result-count { display: inline-block; margin-top: 10px; }
+  .listing-grid { gap: 22px 10px; }
+  .listing-title { gap: 4px; }
+  .listing-title h3 { font-size: 14px; }
+  .listing-title span { font-size: 11px; }
+  .host-dashboard-options { gap: 8px; }
+  .host-dashboard-option { padding: 10px; }
+  .form-grid, .form-grid-three, .form-grid-four { grid-template-columns: minmax(0, 1fr); }
+  .form-span-two { grid-column: auto; }
+  .amenity-form-grid { grid-template-columns: minmax(0, 1fr); }
+  .listing-form-submit-group { flex-direction: column; }
+  .listing-form-submit-group > button { width: 100%; }
+  .storefront-product { grid-template-columns: 76px minmax(0, 1fr); }
+  .storefront-product-art { min-height: 150px; }
+  .storefront-product-copy { padding: 12px; }
+  .storefront-product-footer { align-items: flex-start; }
+  .storefront-product-footer button { width: 100%; justify-content: center; }
+  .detail-shell { width: min(100% - 24px, 1120px); }
+  .detail-heading h1 { font-size: 34px; }
+  .detail-host-row { gap: 10px; }
+  .amenity-grid { grid-template-columns: minmax(0, 1fr); }
+  .gallery-modal { padding-right: 8px; padding-left: 8px; }
+  .gallery-viewer { grid-template-columns: 32px minmax(0, 1fr) 32px; gap: 3px; }
+  .gallery-arrow { width: 32px; min-width: 32px; height: 36px; }
+  .booking-summary-shell { width: min(100% - 24px, 1040px); }
+  .booking-confirmation { align-items: flex-start; }
+  .booking-summary-card { padding: 16px; }
+  .summary-property { align-items: flex-start; gap: 10px; }
+  .summary-property img { width: 76px; height: 76px; }
+  .summary-property h2 { font-size: 19px; }
+  .summary-details { grid-template-columns: minmax(0, 1fr); }
+  .payment-placeholder > span { margin-left: 0; }
+  .auth-layout { padding-right: 16px; padding-left: 16px; }
+  .auth-story-panel { padding: 14px; }
+  .auth-clerk-card { padding-right: 12px; padding-left: 12px; }
+  .host-page { padding-right: 7vw; padding-left: 7vw; }
+}
